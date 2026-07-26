@@ -1,6 +1,3 @@
-def main():
-    print("Agentic AI From Scratch")
+from groq_client import get_client
 
-
-if __name__ == "__main__":
-    main()
+client = get_client()
