@@ -8,7 +8,7 @@ This module is responsible for:
 
 from groq import Groq
 
-from config import Config
+from src.config import Config
 
 
 def get_client() -> Groq:
