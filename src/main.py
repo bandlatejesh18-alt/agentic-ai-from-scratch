@@ -1,32 +1,33 @@
-from src.agent.ai_agent import Agent
-from src.tool_registry import ToolRegistry
-from src.config import Config
-from src.schemas.tool_schemas import tools
-
-from src.tools.calculator import calculator
-from src.tools.weather import weather
-from src.tools.current_time import current_time
+from src.agent.builder import build_agent
 
 
 def main():
 
-    registry = ToolRegistry()
+    agent = build_agent()
 
-    registry.register("calculator", calculator)
-    registry.register("weather", weather)
-    registry.register("current_time", current_time)
+    print("=" * 50)
+    print("AI Agent Started")
+    print("Type 'exit' to quit.")
+    print("=" * 50)
 
-    agent = Agent(
-        tool_registry=registry,
-        tool_schemas=tools,
-        model=Config.MODEL_NAME,
-    )
+    while True:
 
-    response = agent.run(
-        "What is the current temperature in hyderabad and current time and temperature multipled by 10?"
-    )
+        user_query = input("\nYou : ").strip()
 
-    print(response)
+        if user_query.lower() in {
+            "exit",
+            "quit",
+            "bye",
+        }:
+
+            print("\nGoodbye!")
+
+            break
+
+        response = agent.run(user_query)
+
+        print("\nAssistant:")
+        print(response)
 
 
 if __name__ == "__main__":
