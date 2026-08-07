@@ -20,6 +20,7 @@ env/
 
 # Logs
 *.log
+logs/*.log
 
 # Testing
 .pytest_cache/
@@ -28,3 +29,7 @@ env/
 build/
 dist/
 *.egg-info/
+
+# Coverage
+.coverage
+htmlcov/

@@ -1,3 +1,5 @@
+import time
+
 from src.agent.builder import build_agent
 
 
@@ -20,7 +22,10 @@ def main():
             "bye",
         }:
 
-            print("\nGoodbye!")
+            print("\n" + "=" * 50)
+            print("Thank you for using AI Agent From Scratch.")
+            print("Goodbye! 👋")
+            print("=" * 50)
 
             break
 
