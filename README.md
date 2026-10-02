@@ -358,7 +358,7 @@ Src --> Main
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/<your-github-username>/agentic-ai-from-scratch.git
+git clone https://github.com/bandlatejesh18-alt/agentic-ai-from-scratch.git
 
 cd agentic-ai-from-scratch
 ```
